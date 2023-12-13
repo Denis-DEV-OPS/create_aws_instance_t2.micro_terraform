@@ -8,19 +8,6 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
 
-   agent  any
-    stages {
-        stage('checkout') {
-            steps {
-                 script{
-                        dir("terraform")
-                        {
-                            git "https://github.com/Denis-DEV-OPS/create_aws_instance_t2.micro_terraform.git"
-                        }
-                    }
-                }
-            }
-
         stage('Plan') {
             steps {
                 sh 'pwd;cd terraform/ ; terraform init'
