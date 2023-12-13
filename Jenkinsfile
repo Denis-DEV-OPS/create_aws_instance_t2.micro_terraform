@@ -15,7 +15,7 @@ pipeline {
                  script{
                         dir("terraform")
                         {
-                            git "https://github.com/Denis-DEV-OPS/Terraform-Jenkins.git"
+                            git "https://github.com/Denis-DEV-OPS/create_aws_instance_t2.micro_terraform.git"
                         }
                     }
                 }
